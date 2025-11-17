@@ -405,12 +405,24 @@ function submitGuess(auto=false){
   document.getElementById('distanceInfo').textContent = dKm.toFixed(2) + ' km';
   document.getElementById('roundScore').textContent = pts;
 
+  // Affiche l'emplacement réel et la ligne
   actualMarker = L.marker([current.lat, current.lng], {opacity:0.95}).addTo(map);
   line = L.polyline([[guessLatLng.lat, guessLatLng.lng],[current.lat, current.lng]], {color:'#22c1c1', weight:4, opacity:0.9}).addTo(map);
   fitMapToBoth({lat:current.lat, lng:current.lng});
 
-  updateScoreAndProceed(pts, dKm);
+  // Met à jour le score mais attend avant le round suivant
+  totalScore += pts;
+  document.getElementById('scoreInfo').textContent = totalScore;
+
+  if(roundIndex >= roundsTotal){
+    // fin du jeu après un délai
+    setTimeout(()=> endGame(), 2500); // 2.5s pour voir l'emplacement
+  } else {
+    // passe au round suivant après délai
+    setTimeout(()=> nextRound(), 2500); // 2.5s pour voir l'emplacement
+  }
 }
+
 
 /* Skip */
 function skipRound(){
@@ -547,4 +559,5 @@ map && map.on && map.on('click', ()=> { document.getElementById('confirmBtn').di
 </script>
 </body>
 </html>
+
 
