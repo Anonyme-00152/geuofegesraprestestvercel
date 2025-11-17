@@ -36,7 +36,7 @@ h1{margin:0 0 6px 0; font-size:18px}
 label{font-size:13px; color:var(--muted)}
 
 /* Inputs, selects, buttons */
-select,input{
+select,input,button{
   width:100%; 
   padding:8px 10px; 
   margin-top:6px; 
@@ -49,49 +49,30 @@ select,input{
 
 /* Dark style for select dropdown options */
 select {
-  background-color: rgba(0,0,0,0.6);     
-  color: #fff;                 
+  background-color: #000;      /* fond noir */
+  color: #fff;                 /* texte blanc */
   border: 1px solid rgba(255,255,255,0.1);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding-right: 24px;
   cursor: pointer;
-  backdrop-filter: blur(6px);
 }
 select option {
-  background-color: #000;  
-  color: #fff;             
+  background-color: #000;  /* fond noir options */
+  color: #fff;             /* texte blanc options */
 }
 
 /* Rows for buttons */
 .row {display:flex; gap:8px}
 .row > * {flex:1}
 
-/* Buttons style glass */
-button {
-  cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  padding: 8px 12px;
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  font-weight: 500;
-  backdrop-filter: blur(6px);
-  transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
-}
-button:hover {
-  background: rgba(255,255,255,0.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-button:active {
-  transform: scale(0.97);
-}
-button.small {
-  padding: 6px 10px;
-  font-size: 13px;
-  border-radius: 8px;
-}
+/* Buttons */
+button {cursor:pointer; border:none}
+button.primary {background:linear-gradient(90deg,var(--accent),#22c1c1); color:#022; font-weight:700; transition:transform .15s ease}
+button.primary:active{transform:scale(.98)}
+button.ghost {background:transparent; border:1px solid rgba(255,255,255,0.06)}
+.small {font-size:13px; padding:6px 8px; border-radius:8px}
 
 /* Info */
 .stat {display:flex; justify-content:space-between; align-items:center; font-size:14px; margin-top:6px}
@@ -618,6 +599,7 @@ map && map.on && map.on('click', ()=> { document.getElementById('confirmBtn').di
 </script>
 </body>
 </html>
+
 
 
 
