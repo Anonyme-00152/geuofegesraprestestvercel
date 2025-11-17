@@ -225,17 +225,17 @@ footer {margin-top:auto; font-size:12px; color:var(--muted)}
    Points (uniquement rues) - conservés et sûrs
    ------------------------- */
 const cityPoints = {
-  paris: [
-    {lat:48.8667, lng:2.3333},
-    {lat:48.85845, lng:2.29378},
-    {lat:48.85834, lng:2.29445},
-    {lat:48.8606, lng:2.3376},
-    {lat:48.855358, lng:2.34483},
-    {lat:48.8655, lng:2.3211},
-    {lat:48.8685, lng:2.3045},
-    {lat:48.86837, lng:2.30953},
-    {lat:48.868907, lng:2.312868},
-    {lat:48.861821, lng:2.327144}
+    paris: [
+    {lat:48.854687, lng:2.317843},  // Invalides
+    {lat:48.895226, lng:2.373407},  // 19e Arrondissement
+    {lat:48.822227, lng:2.352474},  // Quartier des peupliers
+    {lat:48.853412, lng:2.409172},  // Charonne
+    {lat:48.850246, lng:2.303589},  // École Militaire
+    {lat:48.875130, lng:2.289080},  // Chaillot
+    {lat:48.852469, lng:2.321304},  // 7e Arrondissement
+    {lat:48.895067, lng:2.346205},  // 84-98 Rue Duhesme
+    {lat:48.902938, lng:2.323760},  // 59 Rue Arago, Saint-Ouen-sur-Seine
+    {lat:48.904828, lng:2.373799}   // Av. Victor Hugo, Aubervilliers
   ],
   strasbourg: [
     {lat:48.5833, lng:7.75},
@@ -263,14 +263,14 @@ const cityPoints = {
     {lat:48.950187, lng:7.677909},
     {lat:48.9383, lng:7.6737}
   ],
-  lunel: [
-    {lat:43.67651, lng:4.13576}, {lat:43.6776, lng:4.13845}, {lat:43.6758, lng:4.1302},
-    {lat:43.67462, lng:4.13288}, {lat:43.67826, lng:4.14002}, {lat:43.6794, lng:4.14295},
-    {lat:43.6803, lng:4.14521}, {lat:43.68222, lng:4.14834}, {lat:43.68415, lng:4.14697},
-    {lat:43.68598, lng:4.14344}, {lat:43.68732, lng:4.14084}, {lat:43.68878, lng:4.13815},
-    {lat:43.68991, lng:4.13483}, {lat:43.69054, lng:4.13178}, {lat:43.6918, lng:4.12952},
-    {lat:43.6931, lng:4.12802}, {lat:43.69452, lng:4.13262}, {lat:43.69392, lng:4.13755},
-    {lat:43.69275, lng:4.14132}, {lat:43.6913, lng:4.14425}
+   lunel: [
+    {lat:43.682162, lng:4.127511},  // 542-382 Av. Louis Abric
+    {lat:43.668834, lng:4.126547},  // 104 Rue de la Bouvine
+    {lat:43.674131, lng:4.143396},  // 430-314 D34
+    {lat:43.684638, lng:4.137527},  // 1-147 Rue Thomas Millerot
+    {lat:43.689321, lng:4.127474},  // 292-220 Rue Alexandre Dumas
+    {lat:43.678144, lng:4.115355},  // 104 Rue des Fournels
+    {lat:43.675097, lng:4.122626}   // 366-522 Chem. du Jeu de Mail
   ]
 };
 
@@ -599,6 +599,7 @@ map && map.on && map.on('click', ()=> { document.getElementById('confirmBtn').di
 </script>
 </body>
 </html>
+
 
 
 
